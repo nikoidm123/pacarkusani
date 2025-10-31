@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untuk Sani Bawell Tercinta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/heart.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-pink page-home">
+  <div class="bg-embed" aria-hidden="true">
+    <iframe class="bg-frame" src="flower/Flowers-HTML-CSS-main/flower.html" title="flowers background"></iframe>
+  </div>
+  <canvas id="hearts-canvas" aria-hidden="true"></canvas>
+
+  <main class="container">
+    <header class="header">
+      <img src="img/loopy.png" alt="Loppy" class="loppy-img" />
+      <h1>Untuk Sani Bawell Tercinta</h1>
+      <p class="subtitle">Pilih yang kamu mau ya, sayang ❤️</p>
+    </header>
+
+    <section class="menu-grid">
+      <a class="menu-card" href="music.html">
+        <img src="img/note.svg" alt="Dengerin Musik" class="menu-photo" />
+        <h2>Dengerin Musik</h2>
+      </a>
+
+      <a class="menu-card" href="game.html">
+        <img src="img/heart.svg" alt="Game Bucin" class="menu-photo" />
+        <h2>Game</h2>
+      </a>
+
+      <a class="menu-card" href="ucapan.html">
+        <img src="img/letter.svg" alt="Ucapan Manis" class="menu-photo" />
+        <h2>Ucapan</h2>
+      </a>
+
+      <a class="menu-card disabled" href="#" onclick="return false;">
+        <img src="img/heart.svg" alt="Coming Soon" class="menu-photo" />
+        <h2>Coming Soon</h2>
+      </a>
+    </section>
+  </main>
+
+  <script src="js/hearts.js"></script>
+  <img src="img/loopylove2.png" alt="hiasan" class="decor right" />
+  <img src="img/loopylove.png" alt="hiasan" class="decor left" />
+  <script src="js/sfx.js"></script>
+  <script>
+    Hearts.start('#hearts-canvas');
+  </script>
+</body>
+</html>

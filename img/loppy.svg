@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff0f6"/>
+      <stop offset="1" stop-color="#ffd6e8"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="220" rx="24" fill="url(#g)" stroke="#ffa3c9" stroke-width="3"/>
+  <!-- simple cute bunny face as loppy placeholder -->
+  <g transform="translate(0,6)">
+    <ellipse cx="110" cy="126" rx="66" ry="54" fill="#ffffff" stroke="#ff7fb3" stroke-width="4"/>
+    <rect x="74" y="18" rx="24" width="32" height="90" fill="#fff" stroke="#ff7fb3" stroke-width="4"/>
+    <rect x="114" y="18" rx="24" width="32" height="90" fill="#fff" stroke="#ff7fb3" stroke-width="4"/>
+    <circle cx="90" cy="126" r="6" fill="#49243e"/>
+    <circle cx="130" cy="126" r="6" fill="#49243e"/>
+    <path d="M 96 146 Q 110 158 124 146" fill="none" stroke="#ff6fa1" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="78" cy="138" r="5" fill="#ffb3cd"/>
+    <circle cx="142" cy="138" r="5" fill="#ffb3cd"/>
+  </g>
+</svg>
+

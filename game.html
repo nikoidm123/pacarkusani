@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Bucin | Untuk Sayangku</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/heart.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-pink">
+  <canvas id="hearts-canvas" aria-hidden="true"></canvas>
+
+  <nav class="topbar">
+    <a href="index.html" class="back">← Kembali</a>
+    <h1>Game Bucin</h1>
+  </nav>
+
+  <main class="container game-area">
+    <div class="tabs">
+      <button class="tab active" data-tab="g1">Game 1: Mau/Enggak</button>
+      <button class="tab" data-tab="g2">Game 2: Tap Hati</button>
+    </div>
+
+    <section class="game-card" id="gameCard" data-panel="g1">
+      <h2>Mau jadi milikku selamanya? 💞</h2>
+      <div class="game-buttons">
+        <button id="yesBtn" class="btn btn-main">Mau</button>
+        <button id="noBtn" class="btn btn-ghost">Enggak</button>
+      </div>
+      <p class="score">Love terkumpul: <span id="score">0</span></p>
+    </section>
+
+    <section class="game-card hidden" id="game2" data-panel="g2">
+      <h2>Coming Soon 💗</h2>
+      <p class="score" style="margin-bottom:10px">Game baru lagi disiapin buat kamu.</p>
+      <p style="opacity:.9">Tunggu ya sayang, nanti bakal ada mini game lucu di sini.</p>
+    </section>
+  </main>
+
+  <script src="js/hearts.js"></script>
+  <script src="js/sfx.js"></script>
+  <img src="img/loopy2.png" alt="hiasan" class="decor right" />
+  <img src="img/loopy.png" alt="hiasan" class="decor left" />
+  <img src="img/loopylove2.png" alt="hiasan" class="decor love-right" />
+  <img src="img/loopylove.png" alt="hiasan" class="decor love-left" />
+  <script src="js/game.js"></script>
+  <script src="js/game2.js"></script>
+  <script>
+    Hearts.start('#hearts-canvas');
+    BucinGame.init();
+    TapHearts.init();
+    // tabs
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('[data-panel]');
+    tabs.forEach(t=>t.addEventListener('click', ()=>{
+      tabs.forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      const id = t.getAttribute('data-tab');
+      panels.forEach(p=>p.classList.toggle('hidden', p.getAttribute('data-panel')!==id));
+    }));
+  </script>
+</body>
+</html>

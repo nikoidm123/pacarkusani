@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ucapan Untukmu | Untuk Sayangku</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/heart.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-pink">
+  <canvas id="hearts-canvas" aria-hidden="true"></canvas>
+
+  <nav class="topbar">
+    <a href="index.html" class="back">← Kembali</a>
+    <h1>Ucapan Untukmu</h1>
+  </nav>
+
+  <main class="container">
+    <section class="letter">
+      <div class="paper fancy" id="paper">
+        <div class="shine" aria-hidden="true"></div>
+        <h2>Sayangku, Sani Bawell</h2>
+        <p class="type" id="letterText"></p>
+        <p class="sign">– Aku yang selalu sayang kamu 💗</p>
+      </div>
+      <div class="float-hearts" aria-hidden="true">
+        <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/hearts.js"></script>
+  <script src="js/sfx.js"></script>
+  <img src="img/loopy2.png" alt="hiasan" class="decor right" />
+  <img src="img/loopy.png" alt="hiasan" class="decor left" />
+  <img src="img/loopylove2.png" alt="hiasan" class="decor love-right" />
+  <img src="img/loopylove.png" alt="hiasan" class="decor love-left" />
+  <script>
+    Hearts.start('#hearts-canvas');
+    const text = `
+Halo Sani Bawell (Hilda Putri Dwi Ansano),
+
+Makasih sudah jadi bagian terindah dalam hidupku.
+Maaf kalau kadang aku bikin kamu sedih atau kesal.
+Aku lagi belajar untuk jadi versi terbaik dari diriku,
+supaya bisa selalu jagain dan bahagiain kamu.
+
+Aku sayang kamu, hari ini, besok, dan seterusnya.
+Kalau kamu capek, sandar ke aku ya. Kalau kamu ragu,
+aku peluk sampai tenang. Kamu cukup jadi dirimu sendiri,
+sisanya biar aku yang usahakan.
+
+Terima kasih udah sabar, udah percaya, dan tetap bertahan.
+Kita satu tim selamanya.🤍
+`;
+
+    const p = document.getElementById('letterText');
+    let i = 0;
+    function type() {
+      if (i <= text.length) {
+        p.textContent = text.slice(0, i++);
+        setTimeout(type, 24); // efek mesin tik lembut
+      }
+    }
+    type();
+
+    // subtle open animation
+    document.getElementById('paper').classList.add('open');
+  </script>
+</body>
+</html>

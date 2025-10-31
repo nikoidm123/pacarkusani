@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dengerin Musik | Untuk Sayangku</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="img/heart.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="theme-pink">
+  <canvas id="hearts-canvas" aria-hidden="true"></canvas>
+
+  <nav class="topbar">
+    <a href="index.html" class="back">← Kembali</a>
+    <h1>Dengerin Musik</h1>
+  </nav>
+
+  <main class="music-wrap container">
+    <section class="music-hero">
+      <div class="cover aura" id="coverAura" aria-hidden="true"></div>
+      <img src="img/loopymusik.png" alt="Loopy Music" id="disc" class="disc-img" />
+      <figure class="ayang-single">
+        <div class="photo-card">
+          <img src="img/ayang2.jpg" alt="Ayang" class="ayang-photo" />
+        </div>
+        <div class="deco-hearts" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </figure>
+      <div id="quote" class="quote">Untuk kamu yang paling manis 💖</div>
+    </section>
+
+    <section class="player">
+      <div class="track-meta">
+        <div class="title" id="trackTitle">Tidak ada lagu</div>
+        <div class="time"><span id="curTime">0:00</span> / <span id="durTime">0:00</span></div>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" class="btn">⏮️</button>
+        <button id="playBtn" class="btn btn-main">▶️</button>
+        <button id="nextBtn" class="btn">⏭️</button>
+      </div>
+
+      <div class="progress">
+        <input type="range" id="seek" value="0" min="0" max="100" step="0.1" />
+      </div>
+
+      <div class="visualizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+  </main>
+
+  <audio id="audio" preload="metadata"></audio>
+
+  <script src="js/hearts.js"></script>
+  <script src="js/sfx.js"></script>
+  <img src="img/loopy2.png" alt="hiasan" class="decor right" />
+  <img src="img/loopy.png" alt="hiasan" class="decor left" />
+  <img src="img/loopylove2.png" alt="hiasan" class="decor love-right" />
+  <img src="img/loopylove.png" alt="hiasan" class="decor love-left" />
+  <script src="js/music.js"></script>
+  <script>
+    Hearts.start('#hearts-canvas');
+    MusicPlayer.init();
+  </script>
+</body>
+</html>
